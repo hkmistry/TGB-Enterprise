@@ -129,19 +129,17 @@ export const Identity: React.FC = () => {
 
           {/* STATISTICS GRID */}
           <div className={styles.statsSection}>
-            <div className={styles.statsGrid}>
+            <motion.div 
+              className={styles.statsRowCard}
+              variants={cardVariant}
+            >
               {intro.metrics.map((metric, i) => (
-                <motion.div 
-                  key={i} 
-                  className={styles.statCard}
-                  variants={cardVariant}
-                  whileHover={{ y: -6, scale: 1.03 }}
-                >
+                <div key={i} className={styles.statCol}>
                   <span className={styles.statValue}>{metric.value}</span>
                   <span className={styles.statLabel}>{metric.label}</span>
-                </motion.div>
+                </div>
               ))}
-            </div>
+            </motion.div>
           </div>
 
           {/* FEATURED CLIENTS */}
