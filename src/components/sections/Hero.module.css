@@ -73,7 +73,7 @@
 
 .metaTag {
   font-family: var(--font-primary);
-  font-size: 12.5px; /* Scaled up from 11px */
+  font-size: 11px; /* Reduced by 10% for cleaner presentation */
   font-weight: 600;
   color: var(--color-off-white-muted);
   letter-spacing: 4px; /* Increased tracking slightly */
@@ -82,7 +82,7 @@
 
 .headline {
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 5.5vw, 5.5rem); /* Scaled up for more grandeur */
+  font-size: clamp(2.9rem, 5vw, 5rem); /* Reduced by 10% for cleaner presentation */
   font-weight: 400; 
   line-height: 1.12; 
   color: var(--color-off-white);
@@ -91,7 +91,7 @@
 
 .description {
   font-family: var(--font-primary);
-  font-size: 24px; /* Enlarged from 21px to fill more space */
+  font-size: 21px; /* Reduced by 10% from 24px */
   color: var(--color-off-white-muted);
   line-height: 1.6;
   max-width: 800px; /* Allowed to span slightly wider */
@@ -148,7 +148,7 @@
   gap: var(--space-24);
   margin-top: var(--space-48);
   font-family: var(--font-technical);
-  font-size: 11px;
+  font-size: 10px; /* Reduced by 10% from 11px */
   letter-spacing: 2px;
   text-transform: uppercase;
   color: rgba(244, 241, 234, 0.55);

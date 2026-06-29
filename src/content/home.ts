@@ -97,12 +97,12 @@ export interface TGBStandardSection {
 export const homeContent = {
   hero: {
     label: "SIGNAGE • FACADES • BRANDING",
-    title: "Built to be Seen.\nEngineered to Last.",
+    title: "Built to be Seen.\nMade to be remembered.",
     subtitle: "TGB Enterprise is a premium signage manufacturer in Ahmedabad, specializing in custom indoor and outdoor signage solutions for businesses across India. From design and manufacturing to installation and after-sales support, we create signage that elevates brands and leaves a lasting impression.",
     coordinates: "AHMEDABAD, GUJARAT / 23.0225° N, 72.5714° E",
     ctaLabel: "Explore Services"
   },
-  
+
   identity: {
     intro: {
       label: "WHO WE ARE",
