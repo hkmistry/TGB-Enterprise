@@ -111,7 +111,7 @@ export const homeContent = {
   identity: {
     intro: {
       eyebrowStory: "OUR STORY",
-      headingStory: "We Build Visibility for Businesses Across India.",
+      headingStory: "We Build Visibility\nfor Businesses Across India.",
       subheadingStory: "Designing, manufacturing, and installing premium signage solutions that transform spaces and strengthen brand identities.",
       eyebrowWho: "WHO WE ARE",
       headingWho: "More Than Signage.\nA Partner in Building Brand Presence.",

@@ -81,7 +81,14 @@ export const Identity: React.FC = () => {
           {/* TOP HEADER */}
           <motion.div className={styles.introTopHeader} variants={fadeUp}>
             <span className={styles.introEyebrow}>{intro.eyebrowStory}</span>
-            <h2 className={styles.introTitle}>{intro.headingStory}</h2>
+            <h2 className={styles.introTitle}>
+              {intro.headingStory.split('\n').map((line, i, arr) => (
+                <React.Fragment key={i}>
+                  {line}
+                  {i < arr.length - 1 && <br />}
+                </React.Fragment>
+              ))}
+            </h2>
             <p className={styles.introSubheading}>{intro.subheadingStory}</p>
           </motion.div>
 
