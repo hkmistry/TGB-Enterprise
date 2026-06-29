@@ -115,30 +115,17 @@ export const Identity: React.FC = () => {
                 <p className={styles.introPara}>{intro.paragraph1}</p>
                 <p className={styles.introPara}>{intro.paragraph2}</p>
                 <p className={styles.introPara}>{intro.paragraph3}</p>
-                <p className={styles.closingStatement}>
-                  {intro.closingStatement.split('\n').map((line, i, arr) => (
-                    <React.Fragment key={i}>
-                      {line}
-                      {i < arr.length - 1 && <br />}
-                    </React.Fragment>
-                  ))}
-                </p>
               </div>
-            </motion.div>
-          </div>
 
-          {/* STATISTICS GRID */}
-          <div className={styles.statsSection}>
-            <motion.div 
-              className={styles.statsRowCard}
-              variants={cardVariant}
-            >
-              {intro.metrics.map((metric, i) => (
-                <div key={i} className={styles.statCol}>
-                  <span className={styles.statValue}>{metric.value}</span>
-                  <span className={styles.statLabel}>{metric.label}</span>
-                </div>
-              ))}
+              {/* 2x2 Stats Grid inside Right Column */}
+              <div className={styles.rightColStatsGrid}>
+                {intro.metrics.map((metric, i) => (
+                  <div key={i} className={styles.rightColStatCard}>
+                    <span className={styles.rightColStatValue}>{metric.value}</span>
+                    <span className={styles.rightColStatLabel}>{metric.label}</span>
+                  </div>
+                ))}
+              </div>
             </motion.div>
           </div>
 
@@ -243,6 +230,17 @@ export const Identity: React.FC = () => {
             ))}
           </motion.div>
         </div>
+
+        {/* CLOSING STATEMENT */}
+        <motion.div 
+          className={styles.closingSection}
+          variants={fadeUp}
+        >
+          <p className={styles.closingQuote}>
+            "Because great signage isn't simply made to be seen. <br />
+            It's made to represent your brand for years to come."
+          </p>
+        </motion.div>
 
         {/* ══════════════════════════════════════════
             ZONE 1 — SECTION HEADER

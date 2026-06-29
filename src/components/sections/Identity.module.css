@@ -1016,3 +1016,85 @@
   color: #8B0000;
   border-color: rgba(139, 0, 0, 0.4);
 }
+
+/* ── Stats Grid inside Right Column ── */
+.rightColStatsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-16);
+  margin-top: var(--space-32);
+}
+
+@media (max-width: 520px) {
+  .rightColStatsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+  }
+}
+
+.rightColStatCard {
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: var(--space-20) var(--space-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  transition: all 300ms ease;
+}
+
+.rightColStatCard:hover {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.rightColStatValue {
+  font-family: var(--font-primary);
+  font-size: 26px;
+  font-weight: 700;
+  color: #E60000; /* Vibrant Red */
+  line-height: 1;
+}
+
+.rightColStatLabel {
+  font-family: var(--font-technical);
+  font-size: 10px;
+  color: var(--color-off-white-muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ── Centered Closing Statement at bottom ── */
+.closingSection {
+  margin-top: var(--space-64);
+  padding: var(--space-48) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+}
+
+.closingQuote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  line-height: 1.5;
+  color: var(--color-off-white);
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+  padding: 0 var(--space-24);
+}
+
+.closingQuote::before {
+  content: '“';
+  font-family: var(--font-display);
+  font-size: 80px;
+  color: rgba(230, 0, 0, 0.15);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
