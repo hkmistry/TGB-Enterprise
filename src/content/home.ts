@@ -450,30 +450,5 @@ export const homeContent = {
     title: "Incorporate Identity into Your Architectural Plan",
     description: "Connect with our engineering office in Ahmedabad to discuss structural requirements, load distributions, and material specifications for your project.",
     actionLabel: "Initiate Technical Briefing"
-  },
-
-  testimonials: {
-    header: {
-      label: "08 / PARTNER REFLECTIONS",
-      title: "What Our Partners Say",
-      coordinates: "VERIFIED RELATIONSHIP REGISTER"
-    },
-    reviews: [
-      {
-        quote: "TGB Enterprise delivered exceptional facade signage for our new corporate office in Ahmedabad. The execution was flawless, and the materials used are truly premium. Their structural calculations were sound and gave us immense confidence.",
-        author: "Rajesh Shah",
-        role: "Managing Director, Speranza Tiles"
-      },
-      {
-        quote: "We have worked with multiple signage vendors, but TGB's attention to detail is unmatched. The LED sign boards they manufactured for our retail outlets maintain their brightness perfectly even after years of use. Their after-sales service is outstanding.",
-        author: "Mehul Patel",
-        role: "Founder, Grey Eminence"
-      },
-      {
-        quote: "As architects, we look for precise translation of our designs. TGB has consistently delivered 100% design fidelity for our premium hotel and commercial projects across India. Their engineering team is highly professional.",
-        author: "Amit Gajjar",
-        role: "Principal Architect, APG Associates"
-      }
-    ]
   }
 };
