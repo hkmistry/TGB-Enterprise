@@ -66,8 +66,8 @@
 .accentFrame {
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Increased gap to spread out content */
-  margin-bottom: 32px; /* Increased margin for more breathing room */
+  gap: 14px; /* Reduced by 10% for tighter spacing */
+  margin-bottom: 28px; /* Reduced by 10% for tighter spacing */
   text-align: left;
 }
 
@@ -95,14 +95,14 @@
   color: var(--color-off-white-muted);
   line-height: 1.6;
   max-width: 800px; /* Allowed to span slightly wider */
-  margin-bottom: 48px; /* Massive gap to push the buttons down */
+  margin-bottom: 40px; /* Reduced by 10% (from 48px) */
 }
 
 /* CTAs Row alignment */
 .ctasRow {
   display: flex;
   flex-direction: column;
-  gap: 24px; /* Increased gap between buttons */
+  gap: 20px; /* Reduced by 10% (from 24px) */
 }
 
 @media (min-width: 480px) {
@@ -145,8 +145,8 @@
 .ticksRow {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-24);
-  margin-top: var(--space-48);
+  gap: 20px; /* Reduced by 10% (from var(--space-24)) */
+  margin-top: 40px; /* Reduced by 10% (from var(--space-48)) */
   font-family: var(--font-technical);
   font-size: 10px; /* Reduced by 10% from 11px */
   letter-spacing: 2px;
