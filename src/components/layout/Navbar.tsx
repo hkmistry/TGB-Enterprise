@@ -1,11 +1,12 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import Container from '../ui/Container';
 import { useQuoteModal } from '../../context/QuoteContext';
 import styles from './Navbar.module.css';
 
 export const Navbar: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { openModal } = useQuoteModal();
   const [activeHash, setActiveHash] = React.useState(location.hash || '#home');
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -15,6 +16,20 @@ export const Navbar: React.FC = () => {
       setActiveHash(location.hash || '#home');
     } else {
       setActiveHash('');
+    }
+  }, [location.pathname, location.hash]);
+
+  // Handle scrolling when hash changes or on mount (especially when coming from other pages)
+  React.useEffect(() => {
+    if (location.pathname === '/' && location.hash) {
+      const id = location.hash.substring(1);
+      const element = document.getElementById(id);
+      if (element) {
+        const timer = setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+        return () => clearTimeout(timer);
+      }
     }
   }, [location.pathname, location.hash]);
 
@@ -37,25 +52,34 @@ export const Navbar: React.FC = () => {
     }
   };
 
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string, hash: string) => {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      scrollTo(id, hash);
+    } else {
+      navigate('/' + hash);
+    }
+  };
+
   const navLinks = (
     <>
       <a
         href="/#home"
-        onClick={(e) => { e.preventDefault(); scrollTo('home', '#home'); }}
+        onClick={(e) => handleAnchorClick(e, 'home', '#home')}
         className={`${styles.navLink} ${isAnchorActive('#home') ? styles.activeNavLink : ''}`}
       >
         Home
       </a>
       <a
         href="/#about"
-        onClick={(e) => { e.preventDefault(); scrollTo('about', '#about'); }}
+        onClick={(e) => handleAnchorClick(e, 'about', '#about')}
         className={`${styles.navLink} ${isAnchorActive('#about') ? styles.activeNavLink : ''}`}
       >
         About
       </a>
       <a
         href="/#services-overview"
-        onClick={(e) => { e.preventDefault(); scrollTo('services-overview', '#services-overview'); }}
+        onClick={(e) => handleAnchorClick(e, 'services-overview', '#services-overview')}
         className={`${styles.navLink} ${isAnchorActive('#services-overview') ? styles.activeNavLink : ''}`}
       >
         Services
